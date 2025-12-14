@@ -27,8 +27,8 @@ export const ProductTeaserCard = (props: ProductTeaserCardProps) => {
     posterSrc = "/images/design-mode/9ad78a5534a46e77bafe116ce1c38172c60dc21a-1069x1068.png",
     primaryButtonText = "Deploy your first agent",
     primaryButtonHref = "",
-    secondaryButtonText = "View Documentation",
-    secondaryButtonHref = "",
+    secondaryButtonText = "View Product",
+    secondaryButtonHref = "https://github.com/Debjyoti-19/n8n-saas",
   } = props
 
   // @return
@@ -136,7 +136,8 @@ export const ProductTeaserCard = (props: ProductTeaserCardProps) => {
               <li>
                 <a
                   href={secondaryButtonHref}
-                  onClick={(e) => e.preventDefault()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block cursor-pointer text-[#202020] border border-[#202020] rounded-full px-[18px] py-[15px] text-base leading-4 whitespace-nowrap transition-all duration-150 ease-[cubic-bezier(0.455,0.03,0.515,0.955)] hover:rounded-2xl"
                 >
                   {secondaryButtonText}
