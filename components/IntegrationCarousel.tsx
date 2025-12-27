@@ -16,111 +16,111 @@ type IntegrationCarouselProps = {
 }
 const defaultTopRowApps: IntegrationApp[] = [
   {
-    name: "n8n",
+    name: "Unity",
     logo: "/images/logoipsum-389.png",
   },
   {
-    name: "Cline CLI",
+    name: "Unreal Engine",
     logo: "/images/logoipsum-407.png",
   },
   {
-    name: "GitHub",
+    name: "Wwise",
     logo: "/images/logoipsum-379.png",
   },
   {
-    name: "Docker",
+    name: "FMOD",
     logo: "/images/logoipsum-374.png",
   },
   {
-    name: "PostgreSQL",
+    name: "Godot",
     logo: "/images/logoipsum-381.png",
   },
   {
-    name: "Redis",
+    name: "GameMaker",
     logo: "/images/logoipsum-401.png",
   },
   {
-    name: "Supabase",
+    name: "Construct",
     logo: "/images/logoipsum-403.png",
   },
   {
-    name: "n8n",
+    name: "Unity",
     logo: "/images/logoipsum-389.png",
   },
   {
-    name: "Cline CLI",
+    name: "Unreal Engine",
     logo: "/images/logoipsum-407.png",
   },
   {
-    name: "GitHub",
+    name: "Wwise",
     logo: "/images/logoipsum-379.png",
   },
   {
-    name: "Docker",
+    name: "FMOD",
     logo: "/images/logoipsum-374.png",
   },
   {
-    name: "PostgreSQL",
+    name: "Godot",
     logo: "/images/logoipsum-381.png",
   },
 ]
 const defaultBottomRowApps: IntegrationApp[] = [
   {
-    name: "Vercel",
+    name: "Steam",
     logo: "/images/logoipsum-401.png",
   },
   {
-    name: "MongoDB",
+    name: "Epic Games",
     logo: "/images/logoipsum-403.png",
   },
   {
-    name: "AWS",
+    name: "PlayStation",
     logo: "/images/logoipsum-389.png",
   },
   {
-    name: "Stripe",
+    name: "Xbox",
     logo: "/images/logoipsum-407.png",
   },
   {
-    name: "OpenAI",
+    name: "Nintendo",
     logo: "/images/logoipsum-379.png",
   },
   {
-    name: "Anthropic",
+    name: "Oculus",
     logo: "/images/logoipsum-374.png",
   },
   {
-    name: "Pinecone",
+    name: "HTC Vive",
     logo: "/images/logoipsum-381.png",
   },
   {
-    name: "Vercel",
+    name: "Steam",
     logo: "/images/logoipsum-401.png",
   },
   {
-    name: "MongoDB",
+    name: "Epic Games",
     logo: "/images/logoipsum-403.png",
   },
   {
-    name: "AWS",
+    name: "PlayStation",
     logo: "/images/logoipsum-389.png",
   },
   {
-    name: "Stripe",
+    name: "Xbox",
     logo: "/images/logoipsum-407.png",
   },
   {
-    name: "OpenAI",
+    name: "Nintendo",
     logo: "/images/logoipsum-379.png",
   },
 ]
 
 // @component: IntegrationCarousel
 export const IntegrationCarousel = ({
-  buttonText = "View All Integrations",
+  buttonText = "View All Game Integrations",
   buttonHref = "#",
-  title = "Integrates with your entire development stack.",
-  subtitle = "Connect to n8n, Cline CLI, GitHub, databases, AI models, and dozens of other services to build sophisticated multi-agent systems.",
+  title = "Integrates with your entire game development stack.",
+  subtitle = "Connect to Unity, Unreal Engine, Wwise, FMOD, Steam, PlayStation, Xbox, and dozens of other platforms to build sophisticated audio experiences for games.",
   topRowApps = defaultTopRowApps,
   bottomRowApps = defaultBottomRowApps,
 }: IntegrationCarouselProps) => {

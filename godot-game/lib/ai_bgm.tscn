@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dof12wp7kxbsv"]
+
+[ext_resource type="Script" uid="uid://c2vvkgfo25x3e" path="res://lib/ai_bgm.gd" id="1_jy7xo"]
+
+[node name="AIBGM" type="Node2D"]
+script = ExtResource("1_jy7xo")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]

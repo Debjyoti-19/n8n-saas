@@ -3,22 +3,34 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+
 const navigationLinks = [
   {
     name: "Features",
     href: "#features",
+    isExternal: false,
+  },
+  {
+    name: "Marketplace",
+    href: "/marketplace",
+    isExternal: true,
   },
   {
     name: "Pricing",
     href: "#pricing",
+    isExternal: false,
   },
   {
     name: "Solutions",
     href: "#solutions",
+    isExternal: false,
   },
   {
     name: "Resources",
     href: "#resources",
+    isExternal: false,
   },
 ] as any[]
 
@@ -26,6 +38,8 @@ const navigationLinks = [
 export const PortfolioNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
@@ -33,20 +47,32 @@ export const PortfolioNavbar = () => {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
+
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
   }
-  const handleLinkClick = (href: string) => {
+
+  const handleLinkClick = (href: string, isExternal: boolean) => {
     closeMobileMenu()
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-      })
+    
+    if (isExternal) {
+      router.push(href)
+    } else {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+        })
+      }
     }
+  }
+
+  const handleLogoClick = () => {
+    router.push("/")
   }
 
   // @return
@@ -58,7 +84,7 @@ export const PortfolioNavbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <button
-              onClick={() => handleLinkClick("#home")}
+              onClick={handleLogoClick}
               className="text-2xl font-bold text-foreground hover:text-primary transition-colors duration-200"
               style={{
                 fontFamily: "Plus Jakarta Sans, sans-serif",
@@ -70,7 +96,7 @@ export const PortfolioNavbar = () => {
                   fontWeight: "800",
                 }}
               >
-                Auralink
+                Luceta
               </span>
             </button>
           </div>
@@ -80,7 +106,7 @@ export const PortfolioNavbar = () => {
               {navigationLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => handleLinkClick(link.href)}
+                  onClick={() => handleLinkClick(link.href, link.isExternal)}
                   className="text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors duration-200 relative group"
                   style={{
                     fontFamily: "Figtree, sans-serif",
@@ -96,7 +122,7 @@ export const PortfolioNavbar = () => {
 
           <div className="hidden md:block">
             <button
-              onClick={() => handleLinkClick("#contact")}
+              onClick={() => handleLinkClick("#contact", false)}
               className="bg-[#156d95] text-white px-[18px] rounded-full text-base font-semibold hover:bg-[#156d95]/90 transition-all duration-200 hover:rounded-2xl shadow-sm hover:shadow-md whitespace-nowrap leading-4 py-[15px]"
               style={{
                 fontFamily: "Plus Jakarta Sans, sans-serif",
@@ -150,7 +176,7 @@ export const PortfolioNavbar = () => {
               {navigationLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => handleLinkClick(link.href)}
+                  onClick={() => handleLinkClick(link.href, link.isExternal)}
                   className="block w-full text-left text-foreground hover:text-primary py-3 text-lg font-medium transition-colors duration-200"
                   style={{
                     fontFamily: "Figtree, sans-serif",
@@ -162,7 +188,7 @@ export const PortfolioNavbar = () => {
               ))}
               <div className="pt-4 border-t border-border">
                 <button
-                  onClick={() => handleLinkClick("#contact")}
+                  onClick={() => handleLinkClick("#contact", false)}
                   className="w-full bg-[#156d95] text-white px-[18px] py-[15px] rounded-full text-base font-semibold hover:bg-[#156d95]/90 transition-all duration-200"
                   style={{
                     fontFamily: "Plus Jakarta Sans, sans-serif",

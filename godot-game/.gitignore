@@ -1,0 +1,4 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+ELEVEN_LABS_API_KEY.txt

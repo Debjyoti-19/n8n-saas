@@ -13,19 +13,19 @@ type FAQSectionProps = {
 }
 const defaultFAQs: FAQItem[] = [
   {
-    question: "What is this platform and how does it work with Cline?",
+    question: "What is Luceta and how does it work with game development?",
     answer:
-      "Our platform seamlessly connects Cline CLI with n8n workflows through the Model Context Protocol (MCP). It allows you to build multi-agent systems using simple prompts through Cline, automatically orchestrates complex automation workflows in n8n, and deploys everything with a single click. Simply install our CLI, connect your n8n instance, and start building intelligent automation workflows.",
+      "Luceta is a revolutionary audio cursor platform that transforms how game developers create immersive soundscapes. Our intelligent cursor technology responds to gestures and movements, allowing you to sculpt audio experiences in real-time. Simply connect to your game engine, use our intuitive cursor interface, and deploy globally with a single click. Build locally, sell globally.",
   },
   {
-    question: "How does the MCP integration enable multi-agent systems?",
+    question: "How does the audio cursor technology enable immersive experiences?",
     answer:
-      "The MCP (Model Context Protocol) integration acts as a bridge between Cline and n8n, allowing agents to communicate and collaborate seamlessly. You can define agent behaviors through prompts in Cline, and our platform automatically translates them into n8n workflows. Multiple agents can work together on complex tasks, share context, and coordinate actions—all managed through a single command-line interface.",
+      "Our audio cursor technology uses advanced gesture recognition and spatial audio algorithms to translate your movements into dynamic soundscapes. You can manipulate audio layers, create 3D sound environments, and design interactive audio experiences through intuitive gestures. The cursor adapts to your workflow, learning your preferences to accelerate audio creation for games.",
   },
   {
-    question: "How does one-click deployment work?",
+    question: "How does global deployment work for game audio?",
     answer:
-      "Our deployment system handles all the complexity for you. When you're ready to deploy, simply run a single command and we'll provision the infrastructure, configure n8n workflows, set up agent communications, and deploy everything to production. No manual configuration needed. We support deployment to major cloud providers and include automatic scaling, monitoring, and rollback capabilities.",
+      "Our deployment system handles all the complexity of distributing your audio experiences worldwide. When you're ready to deploy, simply use our one-click system and we'll optimize your audio assets for different regions, handle CDN distribution, configure game engine integrations, and ensure low-latency audio streaming globally. No manual configuration needed - build locally, sell globally.",
   },
 ]
 export const FAQSection = ({ title = "Frequently asked questions", faqs = defaultFAQs }: FAQSectionProps) => {

@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bahydpneegxww"]
+
+[ext_resource type="PackedScene" uid="uid://dw8quiyhmwv1b" path="res://lib/eleven_sfx.tscn" id="1_ygci7"]
+[ext_resource type="PackedScene" uid="uid://bia2qw51ywfl5" path="res://lib/eleven_dialog.tscn" id="3_x3pij"]
+
+[node name="SoundEffects" type="Node2D"]
+
+[node name="Footstep_Grass" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "Footstep_Grass"
+description = "A soft, muted thud.  Slightly different pitch variation depending on the grass type."
+
+[node name="Footstep_Dirt" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "Footstep_Dirt"
+description = "A slightly heavier thud than grass.  A bit more crunchy sound."
+
+[node name="PickUp_Apple" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "PickUp_Apple"
+description = "A small, satisfying 'pop' or 'pluck' sound."
+
+[node name="Skeleton_Death" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "Skeleton_Death"
+description = "A brittle, cracking sound followed by a faint sigh or whistle."
+
+[node name="Wind_Rustle" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "Wind_Rustle"
+description = "A gentle, ambient whooshing and rustling sound. Very quiet, almost subliminal."
+
+[node name="UI_Select" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "UI_Select"
+description = "A short, 'blip' or 'click' sound."
+
+[node name="House_Enter" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "House_Enter"
+description = "A warm, creaky wooden door sound."
+
+[node name="Tree_Shake" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "Tree_Shake"
+description = "A soft, brief rustling sound of leaves."
+
+[node name="Game_Start" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "Game_Start"
+description = "A short, whimsical melody."
+
+[node name="Game_Over" parent="." instance=ExtResource("1_ygci7")]
+audio_name = "Game_Over"
+description = "A somber, short melody."
+
+[node name="NPC1Message" parent="." instance=ExtResource("3_x3pij")]
+audio_name = &"NPC1Message"
+voice_id = "INDKfphIpZiLCUiXae4o"
+
+[node name="NPC2Message" parent="." instance=ExtResource("3_x3pij")]
+audio_name = &"NPC2Message"
+voice_id = "INDKfphIpZiLCUiXae4o"
+dialog = "Hey! I edited the text box!"
+do_not_edit_file_path = "res://godotai/dialog/NPC2Message.mp3"

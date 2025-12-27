@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw8quiyhmwv1b"]
+
+[ext_resource type="Script" uid="uid://butxy7a2simmx" path="res://lib/eleven_sfx.gd" id="1_b2g7s"]
+
+[node name="ElevenSFX" type="Node2D"]
+script = ExtResource("1_b2g7s")
+audio_name = null
+description = null
+do_not_edit_file_path = null
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]

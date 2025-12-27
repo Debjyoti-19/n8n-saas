@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://ceoty2cn315r7"]
+
+[ext_resource type="Texture2D" uid="uid://cn0owohqfr1cc" path="res://assets/coin.png" id="1_a46mt"]
+[ext_resource type="PackedScene" uid="uid://dw8quiyhmwv1b" path="res://lib/eleven_sfx.tscn" id="2_qdnc6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdnc6"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(0, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2kif"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(34, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ghhx"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(68, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv3gx"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(102, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmt8h"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(136, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0b6k"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(170, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ddif"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(204, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8x3j"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(238, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjehy"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(272, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxkgn"]
+atlas = ExtResource("1_a46mt")
+region = Rect2(306, 0, 34, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_elwqk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdnc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2kif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ghhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wv3gx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmt8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0b6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ddif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8x3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjehy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxkgn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Coin" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_elwqk")
+autoplay = "default"
+frame_progress = 0.194339
+
+[node name="ElevenSFX" parent="." instance=ExtResource("2_qdnc6")]
+audio_name = "coin"
+description = "retro single coin drop soundfx"
+do_not_edit_file_path = "res://godotai/coin.mp3"
+autoplay = true

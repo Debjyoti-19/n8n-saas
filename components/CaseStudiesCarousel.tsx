@@ -22,7 +22,7 @@ type CaseStudy = {
 const caseStudies: CaseStudy[] = [
   {
     id: "notion",
-    company: "DevFlow",
+    company: "SoundForge Studios",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 38 48" width="38" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -31,10 +31,10 @@ const caseStudies: CaseStudy[] = [
         />
       </svg>
     ),
-    title: "DevFlow uses our platform to orchestrate complex multi-agent workflows across their entire stack.",
-    features: ["n8n Workflows", "Cline MCP", "One-Click Deploy"],
-    quote: "Building multi-agent systems is now as simple as writing a single prompt. Game changer for our team.",
-    attribution: "Marie Chen, Head of Engineering, DevFlow",
+    title: "SoundForge Studios uses Luceta to create immersive audio experiences across their entire game portfolio.",
+    features: ["Audio Cursor", "Unity Integration", "Global Deploy"],
+    quote: "Creating dynamic soundscapes is now as simple as moving your hand. Revolutionary for our audio team.",
+    attribution: "Alex Chen, Audio Director, SoundForge Studios",
     accentColor: "#16b364",
     cards: [
       {
@@ -51,7 +51,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "cloudwatch",
-    company: "AutoScale",
+    company: "GameScale",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 192 48" width="192" xmlns="http://www.w3.org/2000/svg">
         <filter
@@ -110,7 +110,7 @@ const caseStudies: CaseStudy[] = [
           <path d="m23.9995 18.0005c-3.3137 0-6 2.6863-6 6s2.6863 6 6 6 6-2.6863 6-6-2.6863-6-6-6z" fill="url(#d)" />
         </g>
         <text fill="currentColor" fontFamily="Inter, sans-serif" fontSize="20" fontWeight="600" x="58" y="32">
-          AutoScale
+          GameScale
         </text>
         <defs>
           <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="24" x2="24" y1="0" y2="48">
@@ -127,10 +127,10 @@ const caseStudies: CaseStudy[] = [
         </defs>
       </svg>
     ),
-    title: "AutoScale leverages our platform to deploy intelligent automation pipelines with zero DevOps overhead.",
-    features: ["Auto-Deploy", "MCP Integration", "Multi-Agent Systems"],
-    quote: "We went from concept to production in hours, not weeks. The MCP integration with Cline is brilliant.",
-    attribution: "Sarah Chen, CTO, AutoScale",
+    title: "GameScale leverages Luceta to deploy immersive audio experiences across multiple gaming platforms with zero overhead.",
+    features: ["Multi-Platform", "Gesture Recognition", "Audio Intelligence"],
+    quote: "We went from concept to global release in hours, not weeks. The gesture-based audio creation is brilliant.",
+    attribution: "Sarah Chen, CTO, GameScale",
     accentColor: "#3b82f6",
     cards: [
       {
@@ -147,7 +147,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "eightball",
-    company: "AgentStack",
+    company: "AudioCraft",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 151 48" width="151" xmlns="http://www.w3.org/2000/svg">
         <g fill="#0A0D12">
@@ -159,10 +159,10 @@ const caseStudies: CaseStudy[] = [
         </g>
       </svg>
     ),
-    title: "AgentStack relies on our platform to power their AI agent infrastructure with seamless n8n integration.",
-    features: [" Cline CLI", "Workflow Automation"],
-    quote: "Single prompt, entire multi-agent system deployed. This is the future of AI development.",
-    attribution: "Karri Saarinen, Founder, AgentStack",
+    title: "AudioCraft relies on Luceta to power their game audio infrastructure with seamless engine integration.",
+    features: ["Engine Integration", "Audio Workflows"],
+    quote: "Single gesture, entire soundscape created. This is the future of game audio development.",
+    attribution: "Karri Saarinen, Founder, AudioCraft",
     accentColor: "#0A0D12",
     cards: [
       {
@@ -179,7 +179,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "coreos",
-    company: "FlowBuild",
+    company: "SoundBuild",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 155 48" width="155" xmlns="http://www.w3.org/2000/svg">
         <filter
@@ -273,10 +273,10 @@ const caseStudies: CaseStudy[] = [
         </g>
       </svg>
     ),
-    title: "FlowBuild uses our platform to coordinate agent teams and automate complex development workflows.",
-    features: ["Workflow Orchestration", "Agent Coordination"],
-    quote: "The MCP integration makes building sophisticated agent systems feel effortless. Deployment is instant.",
-    attribution: "Noah Levin, VP Engineering, FlowBuild",
+    title: "SoundBuild uses Luceta to coordinate audio teams and automate complex game audio workflows.",
+    features: ["Audio Orchestration", "Team Coordination"],
+    quote: "The gesture-based interface makes building sophisticated audio systems feel effortless. Deployment is instant.",
+    attribution: "Noah Levin, VP Engineering, SoundBuild",
     accentColor: "#155eef",
     cards: [
       {
@@ -299,7 +299,7 @@ const FeatureBadge = ({
   name: string
 }) => {
   const getIcon = (featureName: string) => {
-    if (featureName.includes("n8n") || featureName.includes("Workflow")) {
+    if (featureName.includes("Audio") || featureName.includes("Unity") || featureName.includes("Engine")) {
       return (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
           <path
@@ -317,7 +317,7 @@ const FeatureBadge = ({
           <path d="M8 5H9M8 10H9" stroke="#EA4B71" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       )
-    } else if (featureName.includes("Cline") || featureName.includes("MCP")) {
+    } else if (featureName.includes("Cursor") || featureName.includes("Gesture") || featureName.includes("Intelligence")) {
       return (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
           <path
@@ -330,7 +330,7 @@ const FeatureBadge = ({
           <path d="M8 8L8 2" stroke="#5E6AD2" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       )
-    } else if (featureName.includes("Deploy") || featureName.includes("Auto")) {
+    } else if (featureName.includes("Deploy") || featureName.includes("Global") || featureName.includes("Multi-Platform")) {
       return (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
           <path
@@ -711,7 +711,7 @@ export const CaseStudiesCarousel = () => {
               fontFamily: "var(--font-figtree), Figtree",
             }}
           >
-            See how leading teams use Auralink to gain clarity on collaboration and team alignment.
+            See how leading game studios use Luceta to create immersive audio experiences and deploy globally.
           </p>
         </div>
 

@@ -18,16 +18,16 @@ type ProductTeaserCardProps = {
 // @component: ProductTeaserCard
 export const ProductTeaserCard = (props: ProductTeaserCardProps) => {
   const {
-    dailyVolume = "5,000+",
-    dailyVolumeLabel = "AUTOMATIONS DEPLOYED",
-    headline = "Multi-Agent Systems, One Click Away",
-    subheadline = "Connect Cline CLI with n8n through MCP integration. Build complex multi-agent workflows with simple prompts and deploy them instantly with zero configuration.",
-    description = "Trusted by developers and teams worldwide, our platform powers intelligent automation across 500+ projects — with seamless n8n integration, CLI-first workflow, and one-click deployment to production.",
+    dailyVolume = "10,000+",
+    dailyVolumeLabel = "AUDIO EXPERIENCES CREATED",
+    headline = "Immersive Audio, One Gesture Away",
+    subheadline = "Revolutionary audio cursor technology for game development. Create dynamic soundscapes with intuitive gestures and deploy immersive audio experiences globally with zero configuration.",
+    description = "Trusted by game developers and studios worldwide, our platform powers immersive audio across 1000+ games — with intelligent cursor technology, gesture-based workflow, and one-click global deployment.",
     videoSrc = "https://cdn.sanity.io/files/1t8iva7t/production/a2cbbed7c998cf93e7ecb6dae75bab42b13139c2.mp4",
     posterSrc = "/images/design-mode/9ad78a5534a46e77bafe116ce1c38172c60dc21a-1069x1068.png",
-    primaryButtonText = "Deploy your first agent",
+    primaryButtonText = "Create your first audio experience",
     primaryButtonHref = "",
-    secondaryButtonText = "View Product",
+    secondaryButtonText = "View Audio Platform",
     secondaryButtonHref = "https://github.com/Debjyoti-19/n8n-saas",
   } = props
 
